@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Contracts;
+using Domains;
 using Domains.ViewModels;
 using Facade;
 using Microsoft.AspNetCore.Builder;
@@ -32,6 +33,12 @@ namespace Api
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
                 .AddMvcOptions(o => o.Filters.Add(new ExceptionHandler()));
+
+            services.Configure<EnvironmentConfig>(options =>
+            {
+                options.endpointBaseUrl = Configuration["EndpointBaseUrl"];
+            });
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Swashbuckle.AspNetCore.Swagger.Info
