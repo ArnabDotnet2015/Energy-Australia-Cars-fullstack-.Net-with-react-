@@ -5,7 +5,9 @@ import { Card, CardTitle, CardText, CardSubtitle, CardBody } from 'reactstrap';
 import { loadcars } from '../redux/actions/actioncreators.cars'
 
 class CarsList extends Component {
+    
     render() {
+        console.log(process.env.REACT_APP_TEST_VAR);
         const showelement = shows => Object.values(shows).length > 0 ? (Object.values(shows)
             .map(show => show.name
             ) + ' ') : 'no show';
