@@ -20,7 +20,7 @@ namespace UT.Services
         [Test]
         public async Task ReturnEmptyWhenNoDataReturnedFromApiAsync()
         {
-            mockCarshowFacede.Setup(p => p.GetAllResponseAsync(It.IsAny<EntityTypes>()))
+            MockCarshowFacede.Setup(p => p.GetAllResponseAsync(It.IsAny<EntityTypes>()))
                 .ReturnsAsync(() => new List<CarShow>());
             var result = await SystemUnderTest.GetCarShows();
 
@@ -32,7 +32,7 @@ namespace UT.Services
         [Test]
         public async Task ReturnNonEmptyWhenSomeDataReturnedFromApiAsync()
         {
-            mockCarshowFacede.Setup(p => p.GetAllResponseAsync(It.IsAny<EntityTypes>()))
+            MockCarshowFacede.Setup(p => p.GetAllResponseAsync(It.IsAny<EntityTypes>()))
                 .ReturnsAsync(() => TestCarShows);
             var result = await SystemUnderTest.GetCarShows();
 
