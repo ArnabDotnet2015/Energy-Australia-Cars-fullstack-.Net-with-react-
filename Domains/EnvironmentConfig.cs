@@ -2,6 +2,6 @@
 {
     public class EnvironmentConfig
     {
-        public string endpointBaseUrl { get; set; }
+        public string EndpointBaseUrl { get; set; }
     }
 }

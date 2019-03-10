@@ -1,11 +1,8 @@
-﻿using AutoFixture;
+﻿using Moq;
+using NUnit.Framework;
 using Domains.Enums;
 using Domains.ViewModels;
-using Moq;
-using NUnit.Framework;
-using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace UT.Services
@@ -18,6 +15,8 @@ namespace UT.Services
             base.SetUp();
         }
 
+        /// <summary>Returns the empty when no data returned from API asynchronous.</summary>
+        /// <returns></returns>
         [Test]
         public async Task ReturnEmptyWhenNoDataReturnedFromApiAsync()
         {
@@ -28,6 +27,8 @@ namespace UT.Services
             Assert.AreEqual(0, result.Count);
         }
 
+        /// <summary>Returns the non empty when some data returned from API asynchronous.</summary>
+        /// <returns></returns>
         [Test]
         public async Task ReturnNonEmptyWhenSomeDataReturnedFromApiAsync()
         {

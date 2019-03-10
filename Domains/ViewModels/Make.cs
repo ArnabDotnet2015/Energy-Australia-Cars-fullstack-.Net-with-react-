@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace Domains.ViewModels
 {
@@ -8,9 +6,9 @@ namespace Domains.ViewModels
     {
         public Make()
         {
-            models = new List<Model>();
+            Models = new List<Model>();
         }
-        public string name { get; set; }
-        public IList<Model> models { get; set; }
+        public string Name { get; set; }
+        public IList<Model> Models { get; set; }
     }
 }

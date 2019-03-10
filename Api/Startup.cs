@@ -36,7 +36,7 @@ namespace Api
 
             services.Configure<EnvironmentConfig>(options =>
             {
-                options.endpointBaseUrl = Configuration["EndpointBaseUrl"];
+                options.EndpointBaseUrl = Configuration["EndpointBaseUrl"];
             });
 
             services.AddSwaggerGen(c =>

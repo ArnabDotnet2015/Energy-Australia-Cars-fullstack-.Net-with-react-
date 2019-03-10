@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace Domains.ViewModels
 {
     public class CarShow
     {
-        public string name { get; set; }
-        public IList<Car> cars { get; set; }
+        public string Name { get; set; }
+        public IList<Car> Cars { get; set; }
     }
 }

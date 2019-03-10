@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Domains.ViewModels
+﻿namespace Domains.ViewModels
 {
     public class Car
     {
-        public string make { get; set; }
-        public string model { get; set; }
+        public string Make { get; set; }
+        public string Model { get; set; }
     }
 }

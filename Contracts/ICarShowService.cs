@@ -1,6 +1,4 @@
-﻿using System;
-using System.Text;
-using Domains.ViewModels;
+﻿using Domains.ViewModels;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 

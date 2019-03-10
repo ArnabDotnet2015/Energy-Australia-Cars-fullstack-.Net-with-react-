@@ -14,10 +14,16 @@ namespace Facade
     public class CarShowFacade: IHelperFacade<CarShow>
     {
         private static string _endpointBaseUrl { get; set; }
+
+        /// <summary>Initializes a new instance of the <see cref="CarShowFacade"/> class.</summary>
+        /// <param name="env">The env.</param>
         public CarShowFacade(IOptions<EnvironmentConfig> env)
         {
-            _endpointBaseUrl = env.Value.endpointBaseUrl;
+            _endpointBaseUrl = env.Value.EndpointBaseUrl;
         }
+        /// <summary>Gets all response asynchronously based on entity type.</summary>
+        /// <param name="entityType">Type of the entity.</param>
+        /// <returns></returns>
         public async Task<IList<CarShow>> GetAllResponseAsync(EntityTypes entityType)
         {
             switch (entityType)
@@ -29,6 +35,9 @@ namespace Facade
             }
         }
 
+        /// <summary>Gets the shows.</summary>
+        /// <param name="entity">The entity.</param>
+        /// <returns></returns>
         private static async Task<IList<CarShow>> GetShows(string entity)
         {
             using (HttpClient client = new HttpClient())

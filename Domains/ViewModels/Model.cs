@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace Domains.ViewModels
 {
@@ -8,9 +6,9 @@ namespace Domains.ViewModels
     {
         public Model()
         {
-            shows = new List<Show>();
+            Shows = new List<Show>();
         }
-        public string name { get; set; }
-        public IList<Show> shows { get; set; }
+        public string Name { get; set; }
+        public IList<Show> Shows { get; set; }
     }
 }

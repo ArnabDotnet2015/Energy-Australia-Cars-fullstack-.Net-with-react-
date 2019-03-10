@@ -1,14 +1,12 @@
 ﻿using Domains.ViewModels;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Api
 {
     public class InernalErrorObjectResult : ObjectResult
     {
+        /// <summary>Initializes a new instance of the <see cref="InernalErrorObjectResult"/> class.</summary>
+        /// <param name="error">The error.</param>
         public InernalErrorObjectResult(Error error)
             : base(error)
         {
